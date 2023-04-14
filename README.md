@@ -1,4 +1,4 @@
-#Project name --> Delibiry
+#Project name --> Delibery
 
 ** Integrantes de grupo
    .Maira Melina Beltran
