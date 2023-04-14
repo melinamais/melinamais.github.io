@@ -1,0 +1,808 @@
+/*----------------------------General---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --color-font-primary : #ffffff;
+    --color-font-secondary : #ee9003;;
+    --color-font-tertiary : #ff9f0d;;
+    --color-text-primary :#0f0e0e;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    background: var(--color-font-primary);
+    font-weight: 500;
+}
+html,body{
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background:var(--color-font-tertiary);
+    border-radius: 50px;
+}
+/*---------------------Menu---------------------*/
+header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding: 12px 0px 8px 8px;
+    z-index: 40;
+}
+header nav{ 
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    width: 100%;
+    margin-right: 15px;
+    box-shadow: 0 0 10px var(--color-font-secondary);
+}
+header nav .logo{
+    padding-left: 10px;
+    width: 20%;
+}
+header nav .logo img{
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 79px;
+    width: 100%;
+}
+header nav ul a{
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    color: var(--color-font-secondary);
+    margin-bottom: 60px;
+}
+header nav ul a:hover{
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+header .boton-menu{
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    padding: 5px;
+    display: none;
+}
+header .boton-menu ion-icon{
+    width: 35px;
+    height: 35px;
+}
+header .items-menu{
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 38px;
+    top: 55px;
+    background-color: var(--color-font-primary);
+    padding: 0px 5px;
+    border-radius: 3px;
+}
+header .items-menu a{
+    padding: 15px;
+    color:var(--color-font-secondary);
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/*---------------------Organizacion-------------------*/
+#organizacion{
+    display: flex;
+    align-items: center;
+    padding: 100px 30px;
+    background-image: url("../images/bg.svg");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 705px;
+    z-index: 20;
+}
+#organizacion article{
+    display: flex;
+    align-items: center;
+    padding: 1px 26px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+#organizacion article .descripcion{
+    background-color: transparent;
+}
+#organizacion article .descripcion h1{
+    color: var(--color-text-primary);
+    background-color: transparent;
+    letter-spacing:1px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#organizacion article .descripcion p{
+    letter-spacing: 1px;
+    line-height: 29px;
+    background-color: transparent;
+}
+#organizacion article img{
+    margin-top: -20px;
+    width: 645px;
+    height: 645px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+#organizacion article .boton{
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px 0px;
+    padding: 10px 35px;
+    border-radius: 25px;
+    background-color: var(--color-font-tertiary);
+    color: var(--color-font-primary);
+    box-shadow: 0 0 20px var(--color-text-primary);
+}
+#organizacion article .boton:hover{
+    cursor: pointer;
+    color: var(--color-font-secondary);
+    background-color: var(--color-font-primary);
+    box-shadow: 0 0 20px 10px var(--color-font-secondary);
+    transition-duration: 0.5s;
+}
+
+/*------------------Productos------------------*/
+#productos{
+    display: block;
+    padding: 0px 45px 50px 45px;
+}
+#productos h6{
+    text-shadow: 0px 5px 4px var(--color-font-tertiary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+}
+#productos .info{
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 3px;
+    color:var(--color-text-primary);
+    margin-bottom: 35px;
+    padding: 1px;
+}
+#productos .productos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 10px 15px 10px;
+}
+#productos .productos-container .producto{
+    min-width: 290px;
+    max-width: 290px;
+    height: 400px;
+    box-shadow: 0 0 20px 1px var(--color-text-primary);
+    border-radius: 17px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#productos .productos-container .producto:hover{
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transform: translateY(-5px);
+    box-shadow: 0px  0px 10px 6px var(--color-font-secondary);
+}
+#productos .productos-container .producto p{
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 3 px;
+    color:var(--color-text-primary);
+    margin-bottom: 20px;
+    padding: 3px 10px 0px 10px;
+}
+#productos .producto img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+#productos .nombre{
+    text-shadow: 0px 0px 1px var(--color-font-tertiary);
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    font-weight: 600;
+    color:var(--color-text-primary);
+}
+#productos .precio{
+    background-color:var(--color-font-secondary);
+    padding: 10px;
+    color: var(--color-font-primary);
+    border-radius: 10px;
+}
+
+/**--------------------------Contacto-----------------------**/
+#contacto{
+    padding: 90px 10px 150px 10px;
+    width: 100%;
+    background-image: url("../images/bg-2.svg");
+    background-repeat: no-repeat;
+    background-size: 290px;
+}
+
+#contacto h2{
+    text-shadow: 0px 5px 4px var(--color-font-tertiary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+    background: transparent;
+}
+#contacto .info{
+    background: transparent;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 3px;
+    color:var(--color-text-primary);
+    margin-bottom: 35px;
+    padding: 1px 100px;
+}
+#contacto article{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 50px 2px;
+    background: transparent;
+}
+#contacto article .item{
+    display: block;
+    width: 300px;
+    height: 130px;
+    padding: 25px 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0  0 12px 0px var(--color-text-primary);
+}
+#contacto article .item:hover{
+    cursor: pointer;
+    box-shadow: 0  0 20px 8px var(--color-font-tertiary);
+    transition-duration: 0.3s;
+    transform: translateY(-5px);
+}
+#contacto article .item ion-icon{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    color: var(--color-font-primary);
+    background-color: var(--color-font-secondary);
+    border-radius: 50%;
+}
+#contacto article .item h3{
+    font-weight: 700;
+    margin: 10px 0px 15px 0px;
+}
+
+/**----------------------Personal-----------------**/
+#personal{
+    display: block;
+    padding: 0px 45px 100px 45px;
+}
+#personal h6{
+    text-shadow: 0px 5px 4px var(--color-font-tertiary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+#personal .info{
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 3px;
+    color:var(--color-text-primary);
+    margin-bottom: 10px;
+    padding: 1px 100px;
+}
+#personal .personal-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 50px 1px;
+    background: transparent;
+
+}
+#personal .personal-container .personal{
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 280px;
+    min-height: 280px;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px var(--color-text-primary);
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+}
+#personal .personal-container .personal:hover{
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 10px var(--color-font-secondary);
+}
+#personal .personal-container .personal img{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+#personal .personal-container .personal .nombre{
+    padding-top:2px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+#personal .personal-container .personal .descripcion{
+    font-size: 13px;
+    margin-top: 3px;
+    letter-spacing: 1px;
+}
+#personal .personal-container .personal .icono ion-icon{
+    color: var(--color-font-tertiary);
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+}
+
+
+/**----------------------Reclamos-----------------**/
+#reclamos{
+    margin: auto;
+    border-radius: 10px;
+    padding: 90px 10px 100px 10px;
+    display: block;
+}
+#reclamos h2{
+    text-shadow: 0px 5px 4px var(--color-font-tertiary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 1px;
+    padding-bottom: 40px;
+}
+#reclamos .info{
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 3px;
+    color:var(--color-text-primary);
+    margin-bottom: 35px;
+    padding: 1px 100px;
+}
+#reclamos form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color:transparent;
+}
+#reclamos form textarea{
+    min-height: 70px;
+    max-height: 100px;
+}
+#reclamos form textarea::-webkit-scrollbar{
+    width: 10px;
+}
+#reclamos form textarea::-webkit-scrollbar-thumb{
+    background:var(--color-font-tertiary);
+    border-radius: 50px;
+}
+#reclamos form textarea, #reclamos form input{
+    background-color: transparent;
+    max-width: 30%;
+    min-width: 30%;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 1.2px solid var(--color-font-tertiary);
+}
+#reclamos form textarea:hover, #reclamos form input:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px var(--color-font-tertiary);
+}
+#reclamos form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 31.4%;
+    padding: 7px 13px;
+    background-color: var(--color-font-tertiary);
+    border: var(--color-font-tertiary);
+    color: var(--color-text-primary);
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 5px;
+}
+#reclamos form button:hover{
+    cursor: pointer;
+    color: var(--color-font-secondary);
+    background-color: var(--color-font-primary);
+    letter-spacing: 7px;
+    box-shadow: 0 0 20px 10px var(--color-font-secondary);
+    transition-duration: 1s;
+}
+#reclamos form button span{
+    background: transparent;
+    font-weight: bolder;
+    padding-top: 2.3px;
+}
+#reclamos form button ion-icon{
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+.mensajes{
+    display: flex;
+    justify-content: center;
+    transform: translateY(-400px);
+}
+.mensaje-error{
+    display: none;
+    margin: auto;
+    border: 1px solid var(--color-font-secondary);
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 30%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 0 20px 6px red;
+}
+/*------------------Modal reclamo------------------*/
+.mensaje-confirmacion{
+    display: none;
+    width: 350px;
+    height: 165px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 10px var(--color-font-secondary);
+    border: 1px solid var(--color-font-secondary);
+}
+.mensaje-confirmacion .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.mensaje-confirmacion .header span{
+    margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.mensaje-confirmacion .header ion-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--color-font-secondary);
+}
+.mensaje-confirmacion .header ion-icon:hover{
+    background-color:rgb(245, 4, 4);
+    color: var(--color-font-primary);
+    cursor: pointer;
+}
+.mensaje-confirmacion .body{
+    text-align: center;
+}
+.mensaje-confirmacion .body .container-botones{
+    display: flex;
+    justify-content: space-between;
+}
+.mensaje-confirmacion .body .container-botones button{
+    margin: 20px auto;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: var(--color-font-primary);
+    background-color: var(--color-font-secondary);
+}
+.mensaje-confirmacion .body .container-botones button:hover{
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transform: translateY(-5px);
+    background-color: var(--color-font-primary);
+    color: var(--color-font-secondary);
+    box-shadow: 0 0 10px 1px var(--color-font-secondary);
+}
+.mensaje-confirmacion .body span{
+    background-color: transparent;
+}
+.mensaje-confirmacion .body ion-icon{
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+
+/*------------------Footer------------------*/
+footer{
+    align-items: center;
+    padding: 60px 60px;
+    background:linear-gradient(to top, rgba(0, 0, 0, 0), rgb(206, 119, 5)),url("../images/especies.png");
+    background-size: contain;
+}
+footer p{
+    padding-top: 20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/*------------------Media------------------*/
+@media (max-width : 1150px){
+    header nav , header nav .logo{
+        display: none;
+    }
+    header{
+        position: relative;
+        padding: 0px;
+        box-shadow: none;
+    }
+    header .boton-menu{
+        display: block;
+    }
+    #organizacion{
+        margin:-2px;
+        padding: 0px;
+        background-size: 750px;
+    }
+    #organizacion article{
+        display: block;
+        text-align: end;
+    }
+    #organizacion article p{
+        padding-left: 400px;
+    }
+    #organizacion article img{
+        margin-top: -100px;
+        width: 570px;
+        height: 570px;
+    }
+    #organizacion article .boton{
+        margin: 30px 0px;
+        padding: 13px 30px;
+        box-shadow: 0 0 20px var(--color-text-primary);
+    }
+    #contacto .info{
+        padding: 1px 100px;
+        font-size: 12px;
+    }
+    #personal .info{
+        padding: 1px 100px;
+        font-size: 12px;
+       
+    }
+    #reclamos .info{
+       padding: 1px;
+       font-size: 12px;
+    }
+}
+@media (max-width : 1042px){
+    #organizacion article p{
+        padding-left: 300px;
+    }
+    
+}
+@media (max-width : 938px){
+    #organizacion article p{
+        padding-left: 200px;
+    }
+}
+@media (max-width : 860px){
+    #organizacion{
+        margin-top: -70px;
+        background-size: 650px;
+    }
+    #organizacion article p{
+        padding-left: 200px;
+    }
+    #organizacion article .descripcion{
+        margin-top: 100px;
+    }
+    #organizacion article .descripcion h1{
+        font-size: 25px;
+    }
+    #organizacion article .boton{
+        font-size: 15px;
+    }
+    #organizacion article img{
+        margin-top: -100px;
+        width: 430px;
+        height: 430px;
+    }
+    #contacto .items{
+        justify-content: center;
+        display: flex;
+        gap: 25px;
+    }
+    .mensaje-confirmacion{
+        left: 30%;
+    }
+}
+@media (max-width : 730px){
+    #organizacion article .descripcion h1{
+        font-size: 20px;
+    }
+    #organizacion{
+        margin-top: -60px;
+        background-size: 600px;
+    }
+    #organizacion article img{
+        margin-top: -10px;
+        width: 310px;
+        height: 310px;
+    }
+    #organizacion article .boton{
+        font-size: 12px;
+    }
+    #organizacion article p{
+        padding-left: 150px;
+        font-size: 13px;
+    }
+    #personal .info{
+        padding: 1px;
+    }
+    #contacto .info{
+        padding: 10px;
+    }
+    #contacto article{
+        gap: 30px;
+    }   
+}
+@media (max-width : 709px){
+    #organizacion article img{
+        width: 280px;
+        height: 280px;
+    }
+    #organizacion article .boton{
+        font-size: 10px;
+        margin-bottom: 60px;
+    }
+    #productos .productos-container{
+        display: flex;
+        
+    }
+    #productos .productos-container .producto{
+        margin: auto;
+    }
+    .mensaje-confirmacion{
+        left: 25%;
+    }
+}
+@media (max-width : 673px){
+    header .boton-menu{
+        background-color: transparent;
+    }
+    header .boton-menu ion-icon{
+        background: var(--color-font-secondary);
+        width: 45px;
+        height: 45px;
+    }
+    #organizacion{
+        margin-top: -70px;
+        background-size: 660px;
+    }
+    #organizacion article .descripcion h1{
+        font-size: 18px;
+    }
+    #organizacion article p{
+        padding-left: 100px;
+        font-size: 13px;
+    }
+    #organizacion article .boton{
+        font-size: 10px;
+        margin-bottom: 60px;
+    }
+    #organizacion article img{
+        margin-top: -100px;
+        width: 430px;
+        height: 430px;
+    }
+    .mensaje-confirmacion{
+        left: 18%;
+    }
+}
+
+@media (max-width : 585px){
+    #organizacion article .descripcion h1{
+        padding-left: 160px;
+    }
+    #organizacion article p{
+        padding-left: 90px;
+    }
+    #organizacion{
+        background-size: 670px;
+    }
+    #organizacion article img{
+        width: 350px;
+        height: 350px;
+    }
+    .mensaje-confirmacion{
+        left: 15%;
+    }
+    #personal .info{
+        font-size: 10px;
+    }
+    #personal .personal-container{
+        gap: 20px;
+        padding-top: 15px;
+    }
+    #reclamos .info{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 472px){
+    #organizacion article p{
+        font-size: 10px;
+        text-align: center;
+        padding: 12px;
+    }
+    #organizacion article img{
+        margin-top: 50px;
+        width: 330px;
+        height: 330px;
+    }
+    #organizacion article .descripcion h1{
+        font-size: 15px;
+        text-align: center;
+        padding: 80px 12px 0px 12px;
+    }
+    #organizacion article .descripcion .boton{
+        position: absolute;
+        margin-top: 5px;
+        width: 120px;
+        left: 33%;
+        font-size: 15px;
+        padding: 5px;
+        text-align: center;
+    } 
+}
