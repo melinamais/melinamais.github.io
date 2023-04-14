@@ -1,4 +1,4 @@
-#Project name --> Delibery
+#Project name --> Delivery
 
 ** Integrantes de grupo
    .Maira Melina Beltran
